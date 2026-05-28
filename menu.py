@@ -47,26 +47,16 @@ def menu_choice():
 def add_sessions(session):
     
     session_name= input('Workout name: ')    
-    
-  
-    while session_name != QUIT:
+
+
+    while True:
+        if session_name == QUIT:
+            break
+        else:
+            
+
         
-        excersice_name = input('enter excersice name: ')
 
-        looping = 'y'
-        set= 1
-        weight = []
-        reps = []
-
-        while looping == 'y':
-            set_weight= float(input(f'weight for set {set} (4 to quit): '))
-            if set_weight== 4:
-                looping = 'n'
-            else: 
-                weight.append(set_weight)
-                weight_reps = float(input('enter set reps: '))
-                reps.append(weight_reps)        
-                set+=1
             #should figure out how to format dictionary loop should work for getting user values, need to also tweak
             #how this nested loop works
             
